@@ -1,0 +1,31 @@
+@import url("https://fonts.googleapis.com/css2?family=Poller+One&family=Ranchers&family=Shadows+Into+Light&display=swap");
+
+:root {
+    --modal-duration: 1s;
+    --primary-color: #30336b;
+    --secondary-color: #be2edd;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poller One', cursive;
+    font-family: 'Ranchers', cursive;
+    font-family: 'Shadows Into Light', cursive;
+    margin: 0;
+}
+
+nav {
+    background-color: var(--primary-color);
+    border-right: 2px solid rgba(200, 200, 200, 0.1);
+    color: #fff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 200px;
+    height: 100vh;
+    z-index: 100;
+    transform: translateX(-100%);
+}
