@@ -15,6 +15,11 @@ body {
     font-family: 'Ranchers', cursive;
     font-family: 'Shadows Into Light', cursive;
     margin: 0;
+    transition: transform 0.3s ease-in;
+}
+
+body.show-nav {
+    transform: translate(200px);
 }
 
 nav {
@@ -125,6 +130,10 @@ button:foucus {
     bottom: 0;
 }
 
+.modal-container.show-madal {
+    display: block;
+}
+
 .modal {
     background-color: #fff;
     border-radius: 5px;
@@ -136,6 +145,8 @@ button:foucus {
     transform: translate(-50%, -50%);
     max-width: 100%;
     width: 400px;
+    animation: modalduration;
+    animation-duration: var(--modal-duration);
 }
 
 .modal-header {
@@ -173,4 +184,14 @@ button:foucus {
     position: absolute;
     top: 0;
     right: 0;
+}
+
+@keyframes modalopen {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
 }
