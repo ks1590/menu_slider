@@ -1,20 +1,19 @@
-const toggle = document.getElementById("toggle");
-const close1 = document.getElementById("close");
-const open1 = document.getElementById("open");
+const close = document.getElementById("close");
+const open = document.getElementById("open");
 const modal = document.getElementById("modal");
+const submit = document.getElementById("submit-btn");
 
-// Toggle nav
-toggle.addEventListener("click", () =>
-    document.body.classList.toggle("show-nav")
+
+// open.addEventListener("click", () => modal.classList.add("show-modal"));
+
+close.addEventListener('click', () => modal.classList.remove('show-modal'));
+
+window.addEventListener('click', e => e.target == modal ? modal.classList.remove('show-modal') : false);
+
+submit.addEventListener("click", () =>
+    alert('送信しました。回答までしばらくお待ち下さい。')
 );
 
-// Show modal
-open1.addEventListener("click", () => modal.classList.add("show-modal"));
-
-// Hide modal
-close1.addEventListener("click", () => modal.classList.remove("show-modal"));
-
-// Hide modal on outside click
-window.addEventListener("click", (e) =>
-    e.target == modal ? modal.classList.remove("show-modal") : false
-);
+$('#open').on("click", function () {
+    $('#modal').addClass('show-modal');
+})
